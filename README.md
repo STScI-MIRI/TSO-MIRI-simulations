@@ -14,6 +14,8 @@ Simulations will be grouped in dedicated folders:
 * TSO-imaging-sims: Simulations for TSO imaging. 
 * 
 
+The scope of each of these simulations is described further in the README in each folder. 
+
 The output format of MIRISim data is compatible with the JWST calibration pipeline.
 
 ## Dependencies
