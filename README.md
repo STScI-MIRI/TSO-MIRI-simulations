@@ -12,7 +12,7 @@ This repository will be used to collect scripts to generate simulated data with 
 Simulations will be grouped in dedicated folders:
 
 * TSO-imaging-sims: Simulations for TSO imaging. 
-* 
+* TSO-lrs-sims: Simulations for TSO slitless low resolution spectroscopy
 
 The scope of each of these simulations is described further in the README in each folder. 
 
