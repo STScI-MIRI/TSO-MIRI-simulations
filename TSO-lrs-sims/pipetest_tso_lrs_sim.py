@@ -137,5 +137,8 @@ def lrstso_sim_config(mode='lrs', arr='SLITLESSPRISM', ngrp=None, nint=None, nex
 	# set up the simulator "under the hood". deafult values can be accepted here.
 	simulator_config = SimulatorConfig.from_default()
 	
+	# set the simulator configuration to use WebbPSF
+	simulator_config['LRSSsim']['take_webbPsf'] = 'T'
+	
 	return simout
 	
