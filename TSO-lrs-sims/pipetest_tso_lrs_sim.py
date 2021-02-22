@@ -62,7 +62,7 @@ def star_scene(scene_file=None, write_cube=False):
 	return scene_file
 
 
-def lrstso_sim_config(mode='lrs', arr='SLITLESSPRISM', ngrp=None, nint=None, nexp=1, scene_file=None, out=True):
+def lrstso_sim_config(mode='lrs', arr='SLITLESSPRISM', ngrp=None, nint=None, nexp=1, webbpsf=True, scene_file=None, out=True):
 	
 	'''
 	Function to set up the imaging TSO simulation. Arguments:
@@ -138,7 +138,9 @@ def lrstso_sim_config(mode='lrs', arr='SLITLESSPRISM', ngrp=None, nint=None, nex
 	simulator_config = SimulatorConfig.from_default()
 	
 	# set the simulator configuration to use WebbPSF
-	simulator_config['LRSSsim']['take_webbPsf'] = 'T'
+	if webbpsf:
+		print('**** Simulation will use the WebbPSF model ****')
+		simulator_config['LRSSim']['take_webbPsf'] = 'T'
 	
 	return simout
 	
