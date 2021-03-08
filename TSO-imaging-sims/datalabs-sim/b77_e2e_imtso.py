@@ -89,7 +89,7 @@ for sd in sim_dirs:
 	modmod = checkheaders(mod)
 	mods.append(modmod)
 	
-	pdb.set_trace()
+	#pdb.set_trace()
 	
 	# create an output directory in each sim directory to hold the pipeline products
 	outdir_name = '{0}/pipe_out_{1}/'.format(sd, jwst.__version__)
@@ -126,7 +126,7 @@ for mm, od, sarr in zip(mods, odirs, subarr):
 	im2 = Image2Pipeline.call(dimod, config_file='cfg_files/calwebb_tso-image2.cfg', save_results=True, output_dir=od)
 	im2mods.append(im2[0])
 	
-	pdb.set_trace()
+	#pdb.set_trace()
 	
 	
 for ii, od, sarr in zip(im2mods, odirs, subarr):	
